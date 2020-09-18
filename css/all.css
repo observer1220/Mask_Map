@@ -1,0 +1,127 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container .row .info {
+  width: 30%;
+}
+
+.container .row .info .header {
+  background: #73c0d8;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.container .row .info .header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.container .row .info .header .date_Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.container .row .info .header .date_Info .r-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  line-height: 1.2;
+}
+
+.container .row .info .header .date_Info .r-side .odd_font {
+  color: yellow;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.container .row .info .area {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  outline: none;
+}
+
+.container .row .info .content {
+  line-height: 1.8;
+  padding: 10px;
+}
+
+.container .row .info .content .content_block {
+  overflow-y: auto;
+  height: 450px;
+}
+
+.container .row .info .content .content_block .pharma_Info {
+  margin-bottom: 0.3rem;
+}
+
+.container .row .info .content .content_block .pharma_Info h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.container .row .info .content .content_block .mask_Info {
+  display: inline;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.container .row .info .content .content_block .mask_Info .mask_adult {
+  display: inline-block;
+  background: #73c0d8;
+  color: #ffffff;
+  font-weight: 900;
+  width: 150px;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+.container .row .info .content .content_block .mask_Info .mask_child {
+  display: inline-block;
+  background: #ffa573;
+  color: #ffffff;
+  font-weight: 900;
+  width: 150px;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.container .row #map {
+  width: 70%;
+  height: 575px;
+}
+
+.odd,
+.even {
+  display: none;
+}
+/*# sourceMappingURL=all.css.map */

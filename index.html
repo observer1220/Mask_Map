@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口罩地圖</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="info">
+                <div class="header">
+                    <!-- <img class="loading" src="img/loading.gif" alt=""> -->
+                    <!-- 一次下兩個class名稱，jsDate用來操作js，title用來操作CSS -->
+                    <div class="date_Info">
+                        <h2 class="jsDate title">星期<span></span></h2>
+                        <div class="r-side">
+                            <h3></h3>
+                            <p class="odd">身分證尾數<span class="odd_font"> 1,3,5,7,9 </span>可以購買</p>
+                            <p class="even">身分證尾數<span class="even_font"> 2,4,6,8,0 </span>可以購買</p>
+                        </div>
+                    </div>
+                    <select name="" class="area">
+                        <option value="請選擇指定區域">請選擇指定區域</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="金門縣">金門縣</option>
+                    </select>
+                </div>
+                <!-- 設定ul是為了在js組字串，把資料塞入li裡面 -->
+                <div class="content">
+                    <ul class="content_block"></ul>
+                </div>
+            </div>
+            <div id='map'></div>
+        </div>
+
+        <script src="js/all.js"></script>
+</body>
+
+</html>
