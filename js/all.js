@@ -12,7 +12,7 @@ function getData() {
         // 從HTML打撈名為loading的class名稱，並將預設值設定為無法顯示
         // document.querySelector('.loading').style.display = 'none';
         data = JSON.parse(xhr.responseText);
-        renderList('高雄市'); // 第3個動作：呈現藥局與口罩資訊('臺北市')為預設值
+        renderList('請選擇城市'); // 第3個動作：呈現藥局與口罩資訊('臺北市')為預設值
     }
 }
 
@@ -85,7 +85,7 @@ function renderList(city) {
                 '<li class="mask_child">' + '兒童口罩 ' + ary[i].properties.mask_child + '</li>'
             '</div>'
             markers.addLayer(L.marker([ary[i].geometry.coordinates[1], ary[i].geometry.coordinates[0]], {
-                    icon: mask //這一行如果沒寫，會無法顯示標記顏色
+                    icon: mask // 這一行如果沒寫，會無法顯示標記顏色
                 })
                 .bindPopup('<h2>' + ary[i].properties.name + '</h2>' + '<span>' + ary[i].properties.address + '</span>' +
                     '<li>' + '成人口罩：' + ary[i].properties.mask_adult + '</li>' +
@@ -112,12 +112,15 @@ document.querySelector('.area').addEventListener('change', function (e) {
 
 // 建立Leaflet地圖，設定經緯度座標，預設縮放值
 var map = L.map('map', {
-    center: [22.6033664,120.3044352],
+    center: [22.6033664, 120.3044352],
     zoom: 16
 });
 
 // Leaflet版的Geolocation：可用來標示使用者目前位置
-map.locate({setView: true, maxZoom: 16});
+map.locate({
+    setView: true,
+    maxZoom: 16
+});
 
 // 目前位置：標記成功
 function onLocationFound(e) {
