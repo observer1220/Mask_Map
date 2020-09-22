@@ -118,7 +118,7 @@ body {
 
 .container .row #map {
   width: 70%;
-  height: 623px;
+  height: auto;
 }
 
 @media (max-width: 1279px) {

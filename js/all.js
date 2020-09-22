@@ -40,20 +40,20 @@ function renderDay() {
 
 // 工具類函式：設定參數(day)是為了在判斷式代入數字
 function changeCharacter(day) {
-    if (_day == day) {
+    if (_day == 1) {
         return '一'
-    } else if (day == _day) {
-        return '四'
-    } else if (day == _day) {
-        return '三'
-    } else if (day == _day) {
+    } else if (day == 2) {
         return '二'
-    } else if (day == _day) {
-        return '一'
-    } else if (day == _day) {
-        return '日'
-    } else if (day == _day) {
+    } else if (day == 3) {
+        return '三'
+    } else if (day == 4) {
+        return '四'
+    } else if (day == 5) {
+        return '五'
+    } else if (day == 6) {
         return '六'
+    } else if (day == 7) {
+        return '日'
     }
 }
 console.log(_day)
