@@ -56,8 +56,6 @@ function changeCharacter(day) {
         return '日'
     }
 }
-console.log(_day)
-
 
 // 顯示資料用函式：呈現藥局名稱、
 function renderList(city) {
@@ -111,15 +109,12 @@ document.querySelector('.area').addEventListener('change', function (e) {
 }, false)
 
 // 建立Leaflet地圖，設定經緯度座標，預設縮放值
-var map = L.map('map', {
-    center: [22.6033664, 120.3044352],
-    zoom: 16
-});
+var map = L.map('map', {});
 
 // Leaflet版的Geolocation：可用來標示使用者目前位置
 map.locate({
     setView: true,
-    maxZoom: 16
+    maxZoom: 7
 });
 
 // 目前位置：標記成功
@@ -128,7 +123,6 @@ function onLocationFound(e) {
     L.marker(e.latlng).addTo(map)
         .bindPopup("您位於此地" + radius + "公尺內").openPopup();
     L.circle(e.latlng, radius).addTo(map);
-    // console.log(e) // 看看e裡面有什麼資訊
 }
 map.on('locationfound', onLocationFound);
 
@@ -137,7 +131,6 @@ function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
-
 
 // 設定圖資來源
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
