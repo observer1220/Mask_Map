@@ -119,7 +119,7 @@ map.locate({
 
 // 目前位置：標記成功
 function onLocationFound(e) {
-    var radius = e.accuracy;
+    var radius = e.accuracy.toFixed(0);
     L.marker(e.latlng).addTo(map)
         .bindPopup('<h2>' + '您大概位於此處' + '</h2>' + '<span>' + '誤差值：' + radius + '公尺內' + '</span>').openPopup();
     L.circle(e.latlng, radius).addTo(map);
