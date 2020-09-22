@@ -121,7 +121,7 @@ map.locate({
 function onLocationFound(e) {
     var radius = e.accuracy;
     L.marker(e.latlng).addTo(map)
-        .bindPopup("您位於此地" + radius + "公尺內").openPopup();
+        .bindPopup('<h2>' + '您大概位於此處' + '</h2>' + '<span>' + '誤差值：' + radius + '公尺內' + '</span>').openPopup();
     L.circle(e.latlng, radius).addTo(map);
 }
 map.on('locationfound', onLocationFound);
