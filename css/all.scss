@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container {
     .row {
@@ -25,23 +25,24 @@ body {
                         flex-direction: column;
                         align-items: flex-end;
                         line-height: 1.2;
-                        .odd_font{
+                        .odd_font {
                             color: yellow;
-                            font-weight:600;
+                            font-weight: 600;
                             font-size: 1.3rem;
                         }
                     }
                 }
             }
-            .area {
+            .area,
+            .town {
                 font-size: 1.2rem;
                 padding: 0.3rem;
-                outline:none;
+                outline: none;
             }
             .content {
                 line-height: 1.8;
                 padding: 10px;
-                .content_block {
+                .infoCard {
                     overflow-y: auto;
                     height: 450px;
                     .pharma_Info {
@@ -85,7 +86,21 @@ body {
         }
         #map {
             width: 70%;
-            height: 575px;
+            height: 623px;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .container {
+        .row {
+            width: 100%;
+            .info {
+                display: none;
+            }
+            #map {
+                width: 100%;
+            }
         }
     }
 }
@@ -93,4 +108,44 @@ body {
 .odd,
 .even {
     display: none;
+}
+
+// MarkerCluster的樣式
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+}
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+}
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+}
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.marker-cluster span {
+    line-height: 30px;
 }

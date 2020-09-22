@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>口罩地圖</title>
+    <title>阿瀚的口罩地圖</title>
     <link rel="stylesheet" href="css/all.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' />
+    <!-- leaflet.css -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
+    <!-- marker_cluster.css  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
+    </link>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
+    </link>
+    <!-- leaflet.js  -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!-- marker_cluster.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
 </head>
 
 <body>
@@ -31,7 +41,7 @@
                         </div>
                     </div>
                     <select name="" class="area">
-                        <option value="請選擇指定區域">請選擇指定區域</option>
+                        <option value="請選擇城市">請選擇城市</option>
                         <option value="基隆市">基隆市</option>
                         <option value="新北市">新北市</option>
                         <option value="臺北市">臺北市</option>
@@ -51,10 +61,16 @@
                         <option value="澎湖縣">澎湖縣</option>
                         <option value="金門縣">金門縣</option>
                     </select>
+                    <!-- <select name="" class="town">
+                        <option value="請選擇行政區">請選擇行政區</option>
+                        <option value="彌陀區">彌陀區</option>
+                        <option value="內門區">內門區</option>
+                        <option value="梓官區">梓官區</option>
+                    </select> -->
                 </div>
                 <!-- 偶素在dev建立的註解：設定ul是為了在js組字串，把資料塞入li裡面 -->
                 <div class="content">
-                    <ul class="content_block"></ul>
+                    <ul class="infoCard"></ul>
                 </div>
             </div>
             <div id='map'></div>
