@@ -108,9 +108,8 @@ document.querySelector('.area').addEventListener('change', function (e) {
     renderList(e.target.value)
 }, false)
 
-// 建立Leaflet地圖，設定經緯度座標，預設縮放值
+// 建立Leaflet地圖
 var map = L.map('map', {});
-
 // Leaflet版的Geolocation：可用來標示使用者目前位置
 map.locate({
     setView: true,
@@ -123,6 +122,8 @@ function onLocationFound(e) {
     L.marker(e.latlng).addTo(map)
         .bindPopup('<h2>' + '您大概位於此處' + '</h2>' + '<span>' + '誤差值：' + radius + '公尺內' + '</span>').openPopup();
     L.circle(e.latlng, radius).addTo(map);
+    console.log(e)
+
 }
 map.on('locationfound', onLocationFound);
 
@@ -131,6 +132,7 @@ function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
+
 
 // 設定圖資來源
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
