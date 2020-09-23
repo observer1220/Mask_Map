@@ -134,6 +134,9 @@ body {
   .container .row .info {
     width: 100%;
   }
+  .container .row .info .header h2 {
+    font-size: 1.2rem;
+  }
   .container .row .info .content {
     display: none;
   }
