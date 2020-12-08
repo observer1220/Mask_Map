@@ -18,17 +18,21 @@ body {
                 }
                 .date_Info {
                     display: flex;
+                    align-items: center;
                     justify-content: space-between;
                     margin-bottom: 0.5rem;
-                    .r-side {
+                    .r_sideDate {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
                         line-height: 1.2;
                         .odd_font {
-                            color: yellow;
                             font-weight: 600;
-                            font-size: 1.3rem;
+                            font-size: 1.2em;
+                        }
+                        .even_font {
+                            font-weight: 600;
+                            font-size: 1.2em;
                         }
                     }
                 }
@@ -98,7 +102,7 @@ body {
             .info {
                 width: 100%;
                 .header {
-                    h2{
+                    h2 {
                         font-size: 1.2rem;
                     }
                 }

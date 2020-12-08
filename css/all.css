@@ -33,13 +33,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 0.5rem;
 }
 
-.container .row .info .header .date_Info .r-side {
+.container .row .info .header .date_Info .r_sideDate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,10 +56,14 @@ body {
   line-height: 1.2;
 }
 
-.container .row .info .header .date_Info .r-side .odd_font {
-  color: yellow;
+.container .row .info .header .date_Info .r_sideDate .odd_font {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2em;
+}
+
+.container .row .info .header .date_Info .r_sideDate .even_font {
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 .container .row .info .area,
@@ -193,4 +200,3 @@ body {
 .marker-cluster span {
   line-height: 30px;
 }
-/*# sourceMappingURL=all.css.map */
