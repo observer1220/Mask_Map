@@ -134,7 +134,7 @@ function onLocationFound(e) {
 }; map.on('locationfound', onLocationFound);
 // 設定目前位置資訊
 map.locate({
-    watch: true, // 持續監視使用者所在位置
+    // watch: true, // 持續監視使用者所在位置(開啟後會一直更新，不適合用在口罩地圖)
     setView: true, // 顯示地圖
     maxZoom: 7,   // 預設值大小
     enableHighAccuracy: true, // 提高精確度(顯示速度較慢)
